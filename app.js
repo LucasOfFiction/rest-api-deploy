@@ -124,14 +124,14 @@ app.patch('/movies/:id', (req, res) => {
   return res.json(updateMovie)
 })
 
-app.options('/movies/id', (req, res) => {
-  const origin = req.headers.origin
-  if(ACCEPTED_ORIGINS.includes(origin || !origin)){
-    res.header('Access-Control-Allow-Origin', origin)
-    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
-  }
-  res.send(200)
-})
+// app.options('/movies/id', (req, res) => {
+//   const origin = req.headers.origin
+//   if(ACCEPTED_ORIGINS.includes(origin || !origin)){
+//     res.header('Access-Control-Allow-Origin', origin)
+//     res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
+//   }
+//   res.send(200)
+// })
 
 const PORT = process.env.PORT ?? 1234
 
